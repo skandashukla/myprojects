@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 23</title>
+    <style>
+        body{
+            background-color: aqua;
+            text-align: center;
+        }
+
+        h1{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Multiplication Table</h1>
+    </header>
+    <input type="text" name="" id="num">
+    <input type="text" name="" id="multi">
+    <button onclick="calculate()">Calculate</button>
+    <h2>Result</h2>
+    <h2 id="result"></h2>
+</body>
+<script>
+     function calculate (){
+
+        var num = document.getElementById("num").value;
+        var multi = document.getElementById("multi").value;
+     var count = 1;
+
+     while(count<=parseInt(multi)){
+         var output = num * count;
+         var result = num + " X " +count+ " = " + output;
+         var create = document.createElement("p");
+         create.innerText = result;
+         document.getElementById("result").appendChild(create);
+         count = count +1;
+     }
+     
+
+     }
+</script>
+    
+</html>
